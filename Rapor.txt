@@ -1,0 +1,63 @@
+Kod Raporu
+
+1. Kodun Amacı
+
+Bu Python kodu, kullanıcıdan iki sayı alarak aritmetik işlemleri gerçekleştiren bir hesap makinesi uygular. İşlemler şu seçenekleri içerir:
+
+Toplama
+Çıkarma
+Çarpma
+Bölme
+Üs alma
+Ayrıca kod, kullanıcı girişlerini doğrulama, hata durumlarında uyarılar verme ve döngüsel bir menüyle kullanıcı etkileşimi sağlama özelliklerine sahiptir.
+
+2. Fonksiyonlar
+
+toplama(a, b):
+
+İki sayıyı toplar.
+Girdi sayıları, iki ondalık basamağa yuvarlanır.
+cikarma(a, b):
+
+İki sayıyı çıkarır.
+Benzer şekilde girdiler yuvarlanır.
+carpma(a, b):
+
+İki sayıyı çarpar ve iki basamaklı ondalık sonuç döndürür.
+bolme(a, b):
+
+Sayıları böler.
+Bölüm 0 ise bir hata mesajı görüntüler ve ana menüye döner.
+ussu(a, b):
+
+Sayının üs işlemini gerçekleştirir.
+Çok büyük bir üs durumunda kullanıcıyı uyarır.
+hesapmakinesi():
+
+Ana kontrol akışı.
+Kullanıcıdan iki sayı alır.
+Seçilen işlemi gerçekleştirir.
+Kullanıcıyı giriş doğrulama, işlem seçimi ve çıkış işlemleriyle yönlendirir.
+
+3. Güçlü Yönler
+
+Hata Yönetimi: Yanlış kullanıcı girişlerinde anlamlı hata mesajları gösteriyor.
+Basamak Kontrolü: Sayıların uzunluğunu ve ondalık basamak sayısını kontrol ederek giriş doğruluğunu sağlıyor.
+Kullanıcı Dostu: Kullanıcıdan işlem sonrasında çıkış yapma ya da devam etme tercihi alınıyor.
+Yinelenebilirlik: Menü döngüsü sayesinde kullanıcı birden fazla işlem yapabiliyor.
+
+4. Zayıf Yönler
+
+Fazladan Döngüler:
+
+Her işlem fonksiyonunda gereksiz bir while True döngüsü var. Bu, kodun okunabilirliğini azaltıyor.
+Döngüler mantıksal olarak bir kez çalışıyor, bu yüzden burada döngü yerine basit bir işlem yeterli olurdu.
+Kod Tekrarı:
+
+Giriş doğrulama işlemleri (ful_basamak, ondalik_basamak) her sayı için ayrı ayrı tekrarlanıyor. Bu işlemler bir yardımcı fonksiyonda toplanabilir.
+Çıkış ve Devam Etme İşlemleri:
+
+Kullanıcıdan çıkış tercihi alınırken büyük/küçük harf duyarlılığı karmaşıklık katıyor. Bunun yerine input().lower() kullanılabilir.
+Kod Formatlama:
+
+Fazladan boşluklar ve gereksiz dönüşümler (örn: float("{:.2f}".format(x))) kodun karmaşıklığını artırıyor.
