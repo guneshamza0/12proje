@@ -45,19 +45,3 @@ Hata Yönetimi: Yanlış kullanıcı girişlerinde anlamlı hata mesajları gös
 Basamak Kontrolü: Sayıların uzunluğunu ve ondalık basamak sayısını kontrol ederek giriş doğruluğunu sağlıyor.
 Kullanıcı Dostu: Kullanıcıdan işlem sonrasında çıkış yapma ya da devam etme tercihi alınıyor.
 Yinelenebilirlik: Menü döngüsü sayesinde kullanıcı birden fazla işlem yapabiliyor.
-
-4. Zayıf Yönler
-
-Fazladan Döngüler:
-
-Her işlem fonksiyonunda gereksiz bir while True döngüsü var. Bu, kodun okunabilirliğini azaltıyor.
-Döngüler mantıksal olarak bir kez çalışıyor, bu yüzden burada döngü yerine basit bir işlem yeterli olurdu.
-Kod Tekrarı:
-
-Giriş doğrulama işlemleri (ful_basamak, ondalik_basamak) her sayı için ayrı ayrı tekrarlanıyor. Bu işlemler bir yardımcı fonksiyonda toplanabilir.
-Çıkış ve Devam Etme İşlemleri:
-
-Kullanıcıdan çıkış tercihi alınırken büyük/küçük harf duyarlılığı karmaşıklık katıyor. Bunun yerine input().lower() kullanılabilir.
-Kod Formatlama:
-
-Fazladan boşluklar ve gereksiz dönüşümler (örn: float("{:.2f}".format(x))) kodun karmaşıklığını artırıyor.
